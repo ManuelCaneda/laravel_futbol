@@ -10,7 +10,8 @@
     @if(count($torneos)==0 || count($equipos)==0)
         <h2 style="color:red">No hay torneos o equipos registrados</h2>
     @else
-    <form action="{{route('form-eq-torneo')}}" method="post">
+    <form action="{{route('add-eq-torneo')}}" method="post">
+        @csrf
         <label for="equipo">Selecciona el equipo:</label>
         <select name="equipo" id="equipo">
             @foreach ($equipos as $e)
@@ -24,6 +25,10 @@
                 <option value="{{$t->id}}">{{$t->nombre}}</option>
             @endforeach
         </select><br><br>
+
+        <label for="anho">Año:</label>
+        <input type="number" min="1900" max="2025" step="1" value="2025" name="anho" id="anho" /><br><br>
+        
         <button type="submit">Añadir equipo</button>
     </form><br><br>
     @endif

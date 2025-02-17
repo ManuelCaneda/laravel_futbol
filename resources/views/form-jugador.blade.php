@@ -27,14 +27,6 @@
         <label for="fecha-nac">Fecha de nacimiento</label><br>
         <input type="date" name="fecha-nac" id="fecha-nac"><br><br>
 
-        <label for="equipo">Equipo:</label>
-        <select name="equipo" id="equipo">
-            <option value="null" selected>Sin equipo</option>
-            @foreach ($equipos as $e)
-                <option value="{{$e->id}}">{{$e->nombre}}</option>
-            @endforeach
-        </select><br><br>
-
         <button type="submit">Añadir</button>
         <button type="reset">Limpiar</button>
     </form><br>

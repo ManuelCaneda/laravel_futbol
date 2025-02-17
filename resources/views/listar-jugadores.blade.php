@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de torneos</title>
 </head>
-<body><h1>Lista de jugadores</h1>
+<body><h1>Lista de jugadores del {{$equipo->nombre}}</h1>
     @if(count($jugadores)==0)
     <h2>No hay jugadores registrados</h2>
     @else
@@ -26,6 +26,6 @@
         @endforeach
     </table>
     @endif
-    <a href="/"><button>Volver</button></a>
+    <a href="/equipos/listar"><button>Volver</button></a>
 </body>
 </html>

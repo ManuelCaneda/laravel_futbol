@@ -17,6 +17,8 @@ return new class extends Migration
             $tabla->string('apellidos',80);
             $tabla->integer('dorsal');
             $tabla->date('f_nac');
+            $tabla->unsignedBigInteger("equipo")->nullable();
+            $tabla->foreign("equipo")->references("id")->on("equipos");
         });
     }
 

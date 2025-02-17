@@ -10,8 +10,8 @@ class Jugador extends Model
 
     public $timestamps = false;
 
-    public function jugador()
+    public function equipos()
     {
-        return $this->belongsToMany(Torneo::class);
+        return $this->belongsTo(Equipo::class);
     }
 }

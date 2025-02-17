@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Equipo;
 use App\Models\Jugador;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class JugadorController extends Controller
     }
 
     public function formJugador(){
-        return view('form-jugador');
+        $data["equipos"] = Equipo::all();
+
+        return view('form-jugador',$data);
     }
 
     public function addJugador(){

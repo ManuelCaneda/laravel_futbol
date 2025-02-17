@@ -17,12 +17,10 @@
     <ul>
         <li><a href="/equipos/form">Alta equipo</a></li>
         <li><a href="/equipos/listar">Listar equipos</a></li>
-        <li><a href="/equipos/formJugadorEquipo">Listar jugadores de un equipo</a></li>
     </ul>
     <h2>Jugadores</h2>
     <ul>
-        <li><a href="/jugadores/form">Añadir jugador a un equipo</a></li>
-        <li><a href="/jugadores/listar">Listar jugadores</a></li>
+        <li><a href="/jugadores/form">Añadir jugador</a></li>
     </ul>
 </body>
 </html>

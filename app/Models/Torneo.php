@@ -9,8 +9,8 @@ class Torneo extends Model
 {
     public $timestamps = false;
 
-    public function torneo()
+    public function equipos()
     {
-        return $this->hasMany(Equipo::class);
+        return $this->belongsToMany(Equipo::class);
     }
 }
